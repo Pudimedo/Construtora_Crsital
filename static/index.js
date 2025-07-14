@@ -13,9 +13,9 @@ function showSlide(index) {
         currentIndex = index;
     }
 
-    // Atualiza a posição do carousel com base no índice atual
-    const offset = -100/4 * currentIndex;  // Movemos a posição para a esquerda
-    carouselImages.style.transform = `translateX(${offset}%)`;
+    // Atualizar a posição do carousel com base no índice atual
+    const offset = -100/images.length * currentIndex; // Posição da imagem em relação ao carousel
+    carouselImages.style.transform = `translateX(${offset}%)`; // Faz a div mostrar a posição da imagem do currentIndex em relação ao carousel
 
     // Atualizar os pontos
     dots.forEach(dot => dot.classList.remove('active'));
@@ -25,10 +25,6 @@ function showSlide(index) {
 function moveSlide(direction) {
     showSlide(currentIndex + direction);
 }
-
-
-// Inicializa a exibição da primeira imagem
-showSlide(currentIndex);
 
 // Adiciona a transição automática
 setInterval(() => {
