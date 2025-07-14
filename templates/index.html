@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Construtora Cristal Ltda</title>
+  <link rel="stylesheet" href="static/index.css">
+</head>
+<body>
+    <header>
+        <a href="/"> <img src="static/banner_construtora_cristal.png" alt="logo" id="logo"> </a>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Sobre</a>
+            <a href="#">Serviços</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+    <main>        
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="static/imagem1.jpg" alt="Imagem 1">
+                <img src="static/imagem2.png" alt="Imagem 2">
+                <img src="static/imagem3.jpg" alt="Imagem 3">
+                <img src="static/imagem4.png" alt="Imagem 4">
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </main>
+
+    <script src="static/index.js"></script>
+</body>
+</html>
