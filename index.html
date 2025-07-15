@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Construtora Cristal Ltda</title>
-  <link rel="stylesheet" href="static/index.css">
+  <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
     <header>
         <a href="#"> <img src="static/banner_construtora_cristal.png" alt="logo" id="logo"> </a>
-        <nav>
+
+        <button id="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+
+        <nav id="menu">
             <a href="#">Início</a>
             <a href="#">Sobre</a>
             <a href="#">Serviços</a>
@@ -25,15 +28,15 @@
                 <img src="static/imagem3.jpg" alt="Imagem 3">
                 <img src="static/imagem4.png" alt="Imagem 4">
             </div>
-            <button class="prev" onclick="moveSlide(-1)">&#10094; <!-- &#10094 é uma seta para a esquerda  --> </button>
-            <button class="next" onclick="moveSlide(1)">&#10095; <!-- &#10095 é uma seta para a direita--> </button>
-        </div>
+                <button class="prev" id="prev-btn" onclick="moveSlide(-1)">&#10094;</button> <!-- horizontal seta esquerda -->
+                <button class="next" id="next-btn" onclick="moveSlide(1)">&#10095;</button>  <!-- horizontal seta direita -->
+            </div>
 
         <div class="dots">
+            <span class="dot" onclick="currentSlide(0)"></span>
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
         </div>
     </main>
 
