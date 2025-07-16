@@ -1,25 +1,30 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
 }
 
 header {
     background-color: rgb(230, 230, 230);
-    color: white;
-    padding: 20px 40px;
+    padding: 16px 32px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 #logo {
-    width: 200px;
+    width: 180px;
     height: auto;
 }
 
 nav {
     display: flex;
-    gap: 15px;
+    gap: 16px;
 }
 
 nav a {
@@ -27,11 +32,12 @@ nav a {
     text-decoration: none;
     padding: 10px 16px;
     border-radius: 4px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
 }
 
 nav a:hover {
-    background-color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.15);
 }
 
 main {
@@ -46,14 +52,14 @@ button {
     border: none;
     padding: 10px;
     font-size: 36px;
-    color: #ffffff; /* cor padrão, você pode mudar para #0d1b2a se o fundo for claro */
+    color: #ffffff;
     cursor: pointer;
     z-index: 10;
     transition: color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    color: #0d1b2a; /* cor no hover */
+    color: #0d1b2a;
     transform: translateY(-50%) scale(1.1);
 }
 
@@ -86,14 +92,20 @@ button:hover {
     transform: scale(1.2);
 }
 
-#menu-toggle {
+#menu_toggle {
     display: none;
+    font-size: 30px;
+    color: #ffffff;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
+
 .carousel {
     position: relative;
     width: 100%;
     max-width: 1200px;
-    height: 75vh;
+    height: 80vh;
     margin: 40px auto;
     overflow: hidden;
     border-radius: 12px;
@@ -120,6 +132,13 @@ button:hover {
     border-radius: 12px;
 }
 
+.menu_area {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-right: 30px;
+}
+
 
 @media (max-width: 620px) {
     header {
@@ -127,13 +146,9 @@ button:hover {
         justify-content: space-between;
     }
 
-    #menu-toggle {
+    #menu_toggle {
         display: block;
-        background: none;
-        border: none;
-        font-size: 28px;
         color: #0d1b2a;
-        cursor: pointer;
         z-index: 1001;
     }
 
@@ -160,5 +175,8 @@ button:hover {
     nav a {
         padding: 15px 20px;
         border-bottom: 1px solid #ccc;
+    }
+    .next, .prev{
+        display: none;
     }
 }

@@ -10,14 +10,16 @@
     <header>
         <a href="#"> <img src="static/banner_construtora_cristal.png" alt="logo" id="logo"> </a>
 
-        <button id="menu-toggle" aria-label="Abrir menu">&#9776;</button> <!--&#9776 menu-->
+        <div class="menu_area">
+            <button id="menu_toggle" aria-label="Abrir menu">&#9776;</button>
 
-        <nav id="menu">
-            <a href="#">Início</a>
-            <a href="#">Sobre</a>
-            <a href="#">Serviços</a>
-            <a href="#">Contato</a>
-        </nav>
+            <nav id="menu">
+                <a href="#">Início</a>
+                <a href="#">Sobre</a>
+                <a href="#">Serviços</a>
+                <a href="#">Contato</a>
+            </nav>
+        </div>
     </header>
 
     <main>        
@@ -39,8 +41,8 @@
                     <img src="static/imagem4.png" alt="Imagem 4">
                 </div>
             </div>
-                <button class="prev" id="prev-btn" onclick="moveSlide(-1)">&#10094;</button> <!-- &#10094 horizontal seta esquerda -->
-                <button class="next" id="next-btn" onclick="moveSlide(1)">&#10095;</button>  <!-- &#1009 horizontal seta direita -->
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button> <!-- &#10094 horizontal seta esquerda -->
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>  <!-- &#1009 horizontal seta direita -->
             </div>
 
         <div class="dots">
