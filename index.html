@@ -7,51 +7,99 @@
   <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
+    <!-- HEADER -->
     <header>
-        <a href="#"> <img src="static/banner_construtora_cristal.png" alt="logo" id="logo"> </a>
+        <div class="container header-content">
+            <a href="#"><img src="static/banner_construtora_cristal.png" alt="logo" id="logo"></a>
 
-        <div class="menu_area">
             <button id="menu_toggle" aria-label="Abrir menu">&#9776;</button>
-
+            
             <nav id="menu">
-                <a href="#">Início</a>
-                <a href="#">Sobre</a>
-                <a href="#">Serviços</a>
-                <a href="#">Contato</a>
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#contato">Contato</a>
             </nav>
         </div>
     </header>
 
-    <main>        
-        <div class="carousel">
+    <main>
+        <!-- SLIDER -->
+        <section id="inicio" class="carousel">
             <div class="carousel_images">
                 <div class="container_img">
                     <img src="static/imagem1.jpg" alt="Imagem 1">
                 </div>
-
                 <div class="container_img">
                     <img src="static/imagem2.png" alt="Imagem 2">
                 </div>
-
                 <div class="container_img">
                     <img src="static/imagem3.jpg" alt="Imagem 3">
                 </div>
-
                 <div class="container_img">
                     <img src="static/imagem4.png" alt="Imagem 4">
                 </div>
             </div>
-                <button class="prev" onclick="moveSlide(-1)">&#10094;</button> <!-- &#10094 horizontal seta esquerda -->
-                <button class="next" onclick="moveSlide(1)">&#10095;</button>  <!-- &#1009 horizontal seta direita -->
-            </div>
-
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </section>
         <div class="dots">
             <span class="dot" onclick="currentSlide(0)"></span>
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
         </div>
+
+        <!-- SOBRE -->
+        <section id="sobre" class="section">
+            <div class="container">
+                <h2>Sobre Nós</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida dolor sit amet lacus accumsan, sed 
+                bibendum lorem tristique. Curabitur blandit dui eget eros gravida, ut elementum orci imperdiet.</p>
+            </div>
+        </section>
+
+        <!-- SERVIÇOS -->
+        <section id="servicos" class="section bg-light">
+            <div class="container">
+                <h2>Nossos Serviços</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Construção Residencial</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis vitae lorem fermentum luctus.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Obras Comerciais</h3>
+                        <p>Integer a eros et odio blandit convallis. Morbi eu ligula ut magna imperdiet aliquet non at nisl.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Projetos Sustentáveis</h3>
+                        <p>Praesent congue nisi a lacus ultricies, non dignissim risus tincidunt. Mauris a lorem a arcu gravida egestas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section id="contato" class="section">
+            <div class="container">
+                <h2>Fale Conosco</h2>
+                <form class="form-contato">
+                    <input type="text" placeholder="Seu nome" required>
+                    <input type="email" placeholder="Seu e-mail" required>
+                    <textarea placeholder="Sua mensagem" rows="5" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
     </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Construtora Cristal Ltda. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
     <script src="static/index.js"></script>
 </body>
